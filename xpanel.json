@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2022-06-01T07:58:52-04:00",
+    "name": "X-Panel",
+    "author": "mg@forcehost.net",
+    "description": "X-Panel egg created and maintained by the X-Panel team",
+    "features": null,
+    "docker_images": {
+        "quay.io/themgflys/xpanel-egg": "quay.io/themgflys/xpanel-egg"
+    },
+    "file_denylist": [],
+    "startup": ".\/entrypoint.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"[X-Panel Services ] Your deployment of X-Panel is now active.\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\necho \"Hello\"",
+            "container": "node:16",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
