@@ -13,7 +13,8 @@ else
         echo "Building and deploying your X-Panel instance...";
 
         git clone --branch main https://github.com/ForceHosting/X-Panel.git /home/container/xpanel
-        mv /home/container/xpanel/** /home/container
+        rm -rf /home/container/xpanel/frontend
+        mv /home/container/xpanel/server/** /home/container
         rm -rf /home/container/xpanel
         mv /home/container/config.json.example /home/container/config.json
 
