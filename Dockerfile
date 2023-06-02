@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:lts-alpine
 
 LABEL maintainer="The MG <mg@forcehost.net>"
 
@@ -9,7 +9,7 @@ RUN apk add --update --no-cache git && \
     chmod +x /entrypoint.sh
 
 USER container
-ENV HOME=/home/container USER=container
+ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
 
