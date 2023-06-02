@@ -4,18 +4,18 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2022-06-01T07:58:52-04:00",
+    "exported_at": "2023-06-01T23:37:00-04:00",
     "name": "X-Panel",
     "author": "mg@forcehost.net",
     "description": "X-Panel egg created and maintained by the X-Panel team",
     "features": null,
     "docker_images": {
-        "quay.io/themgflys/xpanel-egg": "quay.io/themgflys/xpanel-egg"
+        "quay.io\/themgflys\/xpanel-egg": "quay.io\/themgflys\/xpanel-egg"
     },
     "file_denylist": [],
     "startup": ".\/entrypoint.sh",
     "config": {
-        "files": "{}",
+        "files": "{\r\n    \"pterodactyl.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"serverPort\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"[X-Panel Services ] Your deployment of X-Panel is now active.\"\r\n}",
         "logs": "{}",
         "stop": "^C"
