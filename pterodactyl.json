@@ -1,3 +1,15 @@
 {
-    "serverPort": ""
+    "serverPort": "{{server.build.default.port}}",
+    "token": "{{server.build.env.TOKEN}}",
+    "sessionSecrets": "{{server.build.env.SESSION_SEC}}",
+    "pteroKey": "{{server.build.env.PTERO_KEY}}",
+    "jwtToken": "{{server.build.env.JWT_TOKEN}}",
+    "licenseKey": "{{server.build.env.LICENSE_KEY}}",
+    "CLIENT_ID": "{{server.build.env.CLIENT_ID}}",
+    "CLIENT_SECRET": "{{server.build.env.CLIENT_SECRET}}",
+    "CLIENT_REDIRECT_URI": "{{server.build.env.CLIENT_REDIRECT}}",
+    "authUrl": "{{server.build.env.AUTH_URL}}",
+    "successUrl": "{{server.build.env.SUCCESS}}",
+    "encryptKey": "{{server.build.env.ENCRYPT_KEY}}",
+    "bannedUrl": "{{server.build.env.BANNED_URL}}"
 }

@@ -4,10 +4,10 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2023-06-01T23:37:00-04:00",
+    "exported_at": "2023-08-19T22:30:19-04:00",
     "name": "X-Panel",
-    "author": "mg@forcehost.net",
-    "description": "X-Panel egg created and maintained by the X-Panel team",
+    "author": "themg@cybenetworks.com",
+    "description": "X-Panel egg created and maintained by the X-Panel / Force Host team",
     "features": null,
     "docker_images": {
         "quay.io\/themgflys\/xpanel-egg": "quay.io\/themgflys\/xpanel-egg"
@@ -15,7 +15,7 @@
     "file_denylist": [],
     "startup": ".\/entrypoint.sh",
     "config": {
-        "files": "{\r\n    \"pterodactyl.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"serverPort\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"pterodactyl.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"serverPort\": \"{{server.build.default.port}}\",\r\n            \"token\": \"{{server.build.env.TOKEN}}\",\r\n            \"sessionSecrets\": \"{{server.build.env.SESSION_SEC}}\",\r\n            \"pteroKey\": \"{{server.build.env.PTERO_KEY}}\",\r\n            \"jwtToken\": \"{{server.build.env.JWT_TOKEN}}\",\r\n            \"licenseKey\": \"{{server.build.env.LICENSE_KEY}}\",\r\n            \"CLIENT_ID\": \"{{server.build.env.CLIENT_ID}}\",\r\n            \"CLIENT_SECRET\": \"{{server.build.env.CLIENT_SECRET}}\",\r\n            \"CLIENT_REDIRECT_URI\": \"{{server.build.env.CLIENT_REDIRECT}}\",\r\n            \"authUrl\": \"{{server.build.env.AUTH_URL}}\",\r\n            \"successUrl\": \"{{server.build.env.SUCCESS}}\",\r\n            \"encryptKey\": \"{{server.build.env.ENCRYPT_KEY}}\",\r\n            \"bannedUrl\": \"{{server.build.env.BANNED_URL}}\"\r\n        }\r\n    },\r\n \"saas.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"srvBackend\": \"{{server.build.env.ORIGIN}}\",\r\n            \"srvEncrypt\": \"{{server.build.env.ENCRYPT_KEY}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"[X-Panel Services ] Your deployment of X-Panel is now active.\"\r\n}",
         "logs": "{}",
         "stop": "^C"
@@ -27,5 +27,136 @@
             "entrypoint": "bash"
         }
     },
-    "variables": []
+    "variables": [
+        {
+            "name": "Bot Token",
+            "description": "",
+            "env_variable": "TOKEN",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Session Secret",
+            "description": "",
+            "env_variable": "SESSION_SEC",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Ptero Key",
+            "description": "",
+            "env_variable": "PTERO_KEY",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "JWT Token",
+            "description": "",
+            "env_variable": "JWT_TOKEN",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "licenseKey",
+            "description": "",
+            "env_variable": "LICENSE_KEY",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Discord Client ID",
+            "description": "",
+            "env_variable": "CLIENT_ID",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Discord Client Sec",
+            "description": "",
+            "env_variable": "CLIENT_SECRET",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "Client Redirect",
+            "description": "",
+            "env_variable": "CLIENT_REDIRECT",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Auth URL",
+            "description": "",
+            "env_variable": "AUTH_URL",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Success URL",
+            "description": "",
+            "env_variable": "SUCCESS",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Encryption Key",
+            "description": "",
+            "env_variable": "ENCRYPT_KEY",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Ban URL",
+            "description": "",
+            "env_variable": "BANNED_URL",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "origin",
+            "description": "",
+            "env_variable": "ORIGIN",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string",
+            "field_type": "text"
+        }
+    ]
 }
