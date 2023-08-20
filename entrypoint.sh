@@ -24,5 +24,4 @@ else
 
         echo "X-Panel was successfully deployed! Please open your config.json and start configuring the deployment. To build the frontend, please download the frontend files, modify them as you wish, then run npm run build. Once built, drag the contents of the build folder into a folder called 'site' within your deployment.";
         exit 0;
-        ;;
 fi
