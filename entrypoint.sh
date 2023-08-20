@@ -9,7 +9,7 @@ else
 
         echo "Building and deploying your X-Panel instance...";
 
-        git clone --branch saas https://github.com/ForceHosting/X-Panel.git /home/container/xpanel
+        git clone --branch CAv4 https://github.com/ForceHosting/X-Panel.git /home/container/xpanel
         mv /home/container/saas.json /home/container/xpanel/frontend/src/saas.json
         cd /home/container/xpanel/frontend && npm install --legacy-peer-deps && npm run build
         
