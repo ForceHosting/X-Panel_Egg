@@ -1,5 +1,5 @@
 {
-    "serverPort": "{{server.build.default.port}}",
+    "serverPort": "8080",
     "token": "{{server.build.env.TOKEN}}",
     "sessionSecrets": "{{server.build.env.SESSION_SEC}}",
     "pteroKey": "{{server.build.env.PTERO_KEY}}",
